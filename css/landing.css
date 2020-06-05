@@ -1,0 +1,366 @@
+body {
+  font-family: lato, sans-serif;
+  padding: 0em;
+  margin: 0em;
+}
+
+h1, h2 {
+  margin: 0em;
+}
+
+.container {
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 1.5em;
+}
+
+#intro, #outro {
+  background: #cd9efa;
+  color: #381251;
+}
+
+#working {
+  background: #2d1b3b;
+  color: #7c3ade;
+}
+
+#intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#intro #logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3em 0;
+}
+
+#intro #logo img {
+  width: 5.5em;
+  margin-right: 1em;
+}
+
+#intro #logo span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 4em;
+}
+
+#intro #subtitle {
+  font-size: 1.5em;
+}
+
+#intro #subtitle p {
+  margin: 0.7em 0;
+}
+
+#intro #offer {
+  font-size: 1.7em;
+  margin-top: 0.3em;
+  border-bottom: 1px solid #381251;
+}
+
+#intro #scroll_hint {
+  width: 3.3em;
+  position: absolute;
+  bottom: 0;
+}
+
+#intro #scroll_hint img {
+  width: 100%;
+}
+
+.cta {
+  max-width: 98vw;
+  width: 450px;
+  margin-top: 1em;
+}
+
+.cta form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cta form label {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin: 0.3em 0;
+}
+
+.cta form input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.7em;
+  border-radius: 1em;
+  font-size: 1.2em;
+  outline: none;
+  border: 4px solid #381251;
+}
+
+.cta form input[type=text] {
+  color: #381251;
+  background: #FFF;
+}
+
+.cta form input[type=submit] {
+  color: #FFF;
+  background: #381251;
+  margin: 1.2em 0;
+  cursor: pointer;
+}
+
+.cta form input[type=text]:required {
+  outline: none;
+}
+
+.cta form input.touched:invalid {
+  outline: none;
+  border-color: #d24d57;
+}
+
+.cta form div {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cta form div #tooltip {
+  position: absolute;
+  top: 0.7em;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  right: -40px;
+  background: #381251;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#working {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #FFF;
+  font-size: 1.2em;
+  -ms-grid-rows: 5em auto;
+      grid-template-rows: 5em auto;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+      grid-template-areas: "title" "model";
+}
+
+#working #title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  grid-row: title;
+}
+
+#working #model {
+  grid-row: model;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "create cue1 share cue2 profit";
+}
+
+#working #model .stone {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#working #model .stone h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+}
+
+#working #model .stone img {
+  position: absolute;
+}
+
+#working #model #create h2 img {
+  width: 0.6em;
+}
+
+#working #model #create h2 #pen {
+  width: 1.5em;
+  top: -150%;
+  right: -40%;
+}
+
+#working #model #create h2 #circle {
+  bottom: -50%;
+  left: -40%;
+}
+
+#working #model #create h2 #cross {
+  bottom: -90%;
+  left: 10%;
+}
+
+#working #model #create h2 #square {
+  top: -80%;
+  left: -15%;
+}
+
+#working #model #create h2 #triangle {
+  bottom: -80%;
+  right: 0%;
+}
+
+#working #model #share h2 #horn {
+  width: 2em;
+  top: -120%;
+  right: -60%;
+}
+
+#working #model #share h2 #dialog {
+  width: 2em;
+  top: -155%;
+  left: -45%;
+}
+
+#working #model #profit h2 #confetti {
+  width: 3em;
+  top: -200%;
+  right: -80%;
+}
+
+#working #model #profit h2 #confetti-mirror {
+  width: 2em;
+  top: -160%;
+  left: -70%;
+}
+
+#working #model #profit h2 #rupee {
+  width: 0.7em;
+  top: -120%;
+  left: 30%;
+}
+
+#working #model .cue-line {
+  height: 3px;
+  background: #7c3ade;
+  border-radius: 3px;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#working #model #create {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: create;
+}
+
+#working #model #share {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: share;
+}
+
+#working #model #profit {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: profit;
+}
+
+#working #model #cue1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: cue1;
+}
+
+#working #model #cue2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: cue2;
+}
+
+#outro {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 8em auto;
+      grid-template-rows: 8em auto;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+      grid-template-areas: "title" "cta";
+  position: relative;
+}
+
+#outro > * {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  position: absolute;
+}
+
+#outro #title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+#outro #cta {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: cta;
+}
+/*# sourceMappingURL=landing.css.map */

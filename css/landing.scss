@@ -1,0 +1,289 @@
+$light-foreground: #381251;
+$light-background: #cd9efa;
+$dark-foreground: #7c3ade;
+$dark-background: #2d1b3b;
+$white: #FFF;
+$red: #d24d57;
+
+
+body {
+    font-family: lato, sans-serif;
+    padding: 0em;
+    margin: 0em;
+}
+h1, h2 {
+    margin: 0em;
+}
+.container {
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0 1.5em;
+}
+
+#intro, #outro {
+    background: $light-background;
+    color: $light-foreground;
+}
+
+#working {
+    background: $dark-background;
+    color: $dark-foreground;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 3em 0;
+
+        img {
+            width: 5.5em;
+            margin-right: 1em;
+        }
+        span {
+            align-self: center;
+            font-size: 4em;
+        }
+    }
+
+    #subtitle {
+        font-size: 1.5em;
+
+        p {
+            margin: 0.7em 0;
+        }
+    }
+
+    #offer {
+        font-size: 1.7em;
+        margin-top: 0.3em;
+
+        border-bottom: 1px solid $light-foreground;
+    }
+
+    #scroll_hint {
+        width: 3.3em;
+        position: absolute;
+        bottom: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.cta {
+    max-width: 98vw;
+    width: 450px;
+    margin-top: 1em;
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 1.7em;
+            font-weight: bold;
+            margin: 0.3em 0;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.7em;
+            border-radius: 1em;
+            font-size: 1.2em;
+            outline: none;
+            border: 4px solid $light-foreground;
+        }
+
+        input[type=text] {
+            color: $light-foreground;
+            background: $white;
+        }
+
+        input[type=submit] {
+            color: $white;
+            background: $light-foreground;
+            margin: 1.2em 0;
+            cursor: pointer;
+        }
+
+        input[type=text]:required {
+            outline: none;
+        }
+
+        input.touched:invalid {
+            outline: none;
+            border-color: $red;
+        }
+
+        div {
+            position: relative;
+            width: 100%;
+            display: flex;
+
+            #tooltip {
+                position: absolute;
+                top: 0.7em;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                right: -40px;
+                background: $light-foreground;
+                color: $white;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+
+}
+
+#working {
+    display: grid;
+    flex-direction: column;
+    color: $white;
+    font-size: 1.2em;
+    grid-template-rows: 5em auto;
+    grid-template-columns: auto;
+    grid-template-areas: "title" "model";
+    
+    #title {
+        align-self: center;
+        justify-self: center;
+        grid-row: title;
+    }
+    #model {
+        grid-row: model;
+        display: grid;
+        grid-template-columns:  repeat(5, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "create cue1 share cue2 profit";
+
+        .stone {
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+            h2 {
+                align-self: center;
+                position: relative;
+            }
+            img {
+                position: absolute;
+            }
+            
+        }
+
+        #create h2 {
+            img {
+                width: 0.6em;
+            }
+            #pen {
+                width: 1.5em;
+                top: -150%;
+                right: -40%;
+            }
+            #circle {
+                bottom: -50%;
+                left: -40%;
+            }
+            #cross {
+                bottom: -90%;
+                left: 10%;
+            }
+            #square {
+                top: -80%;
+                left: -15%;
+            }
+            #triangle {
+                bottom: -80%;
+                right: 0%;
+            }
+        }
+        #share h2 {
+            #horn {
+                width: 2em;
+                top: -120%;
+                right: -60%;
+            }
+            #dialog {
+                width: 2em;
+                top: -155%;
+                left: -45%;
+            }
+        }
+        #profit h2 {
+            #confetti {
+                width: 3em;
+                top: -200%;
+                right: -80%;
+            }
+            #confetti-mirror {
+                width: 2em;
+                top: -160%;
+                left: -70%;
+            }
+            #rupee {
+                width: 0.7em;
+                top: -120%;
+                left: 30%;
+            }
+        }
+
+        .cue-line {
+            height: 3px;
+            background: $dark-foreground;
+            border-radius: 3px;
+            justify-self: stretch;
+            align-self: center;
+        }
+        #create {
+            grid-area: create;
+        }
+        #share {
+            grid-area: share;
+        }
+        #profit {
+            grid-area: profit;
+        }
+        #cue1 {
+            grid-area: cue1;
+        }
+        #cue2 {
+            grid-area: cue2;
+        }
+    }
+}
+
+#outro {
+    display: grid;
+    grid-template-rows: 8em auto;
+    grid-template-columns: auto;
+    grid-template-areas: "title" "cta";
+    position: relative;
+
+    > * {
+        align-self: center;
+        justify-self: center;
+        position: absolute;
+    }
+    #title {
+        grid-area: title;
+    }
+    #cta {
+        grid-area: cta;
+    }
+}
